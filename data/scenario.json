@@ -1,7 +1,11 @@
 {
   "asOf": "2026-10-01",
   "synthetic": true,
-  "currency": "IQD",
+  "currencies": {
+    "construction": "IQD",
+    "supply": "USD"
+  },
+  "projectBudgetCurrency": "IQD",
   "construction": [
     [
       "C01",
@@ -151,7 +155,7 @@
       "أجهزة حفظ العينات",
       "جهاز",
       3,
-      45000000,
+      34000,
       "S10",
       "Ultra low temperature freezer",
       -70,
@@ -165,7 +169,7 @@
       "أجهزة السلامة",
       "جهاز",
       2,
-      32000000,
+      24000,
       "S20",
       "Class II biosafety cabinet",
       -60,
@@ -179,7 +183,7 @@
       "أجهزة التحضير",
       "جهاز",
       4,
-      8500000,
+      6500,
       "S30",
       "Refrigerated centrifuge",
       -55,
@@ -193,7 +197,7 @@
       "أجهزة الفحص",
       "جهاز",
       6,
-      4000000,
+      3000,
       "S40",
       "Research microscope with camera",
       -50,
@@ -207,7 +211,7 @@
       "أجهزة الزرع",
       "جهاز",
       2,
-      9000000,
+      7000,
       "S50",
       "Digital laboratory incubator",
       -45,
@@ -221,7 +225,7 @@
       "الطاقة الاحتياطية",
       "جهاز",
       4,
-      2500000,
+      1900,
       "S60",
       "Laboratory UPS unit",
       -40,
@@ -232,7 +236,7 @@
   ],
   "totals": {
     "constructionAward": 3400000000,
-    "supplyAward": 285000000,
+    "supplyAward": 215600,
     "constructionEarnedPeriod1": 504000000,
     "constructionEarnedPeriod2": 645000000,
     "constructionProgress1": 14.823529411764707,
@@ -241,7 +245,7 @@
     "changedConstructionBoq": 3411100000,
     "constructionOriginalContract": 3910000000,
     "constructionEffectiveContractAfterChange": 3921100000,
-    "supplyOriginalContract": 327750000
+    "supplyOriginalContract": 247940
   },
   "dates": {
     "D": "2026-10-01",

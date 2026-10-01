@@ -4,7 +4,7 @@ Prepared against the application working tree inspected on 1 October 2026. The e
 
 ## Verified for this handover
 
-- Two XLSX first-sheet BOQs: 10 construction rows totaling 3,400,000,000 IQD and 6 supply rows totaling 285,000,000 IQD. Quantity/rate columns contain numeric values; there is no extra totals row to import as an item.
+- Two XLSX first-sheet BOQs: 10 construction rows totaling 3,400,000,000 IQD and 6 supply rows totaling 215,600 USD. Quantity/rate columns contain numeric values; there is no extra totals row to import as an item.
 - Three XER files parsed using the application's actual `parseXer` implementation: 11 construction activities and 7 supply activities including one milestone each; six workdays, Friday off, 8 hours per day; valid endpoint IDs on every relationship. See `schedule-parser-results.json`.
 - Twenty-one actual PDFs checked for readable extracted text and one-page output. Representative measurement, nonconformity and payment-letter pages visually inspected. See `pdf-checks.json`.
 - Construction measured values, period percentages, financial percentages, 20% quantity tier and full contract value reconciled independently.
@@ -38,3 +38,5 @@ The historical video guides and old runsheets were not treated as authoritative 
 The HTML/CSS/JavaScript handbook was tested directly over `file://` in Chrome, without a server. Checks covered all 21 chapter/reference pages, their local links, 26 upload cards, PDF/XLSX/XER filtering, text search, clipboard copy, session-record export, persisted notes and chapter/checklist completion. No JavaScript page errors were observed. Screenshots were visually reviewed for the home page, a data-heavy chapter and the mobile home page. Page overflow was checked at 375, 768, 1024 and 1440 pixels for home, reader, library and notebook.
 
 These website checks do not replace the business-flow rehearsal in the target EPM instance described above. Browser-local notes are not centrally stored. Export each session record before clearing browser data or switching devices.
+
+Supply currency edition: USD award 215,600 + reserve 21,560 + supervision 10,780 = 247,940 USD. Native currency is explicit in the workbook header and guide. Project budget 330,000,000 IQD and annual allocation 300,000,000 IQD remain separately recorded. The 1,310 IQD/USD example is illustrative, not a fetched quote.

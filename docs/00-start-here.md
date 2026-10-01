@@ -2,7 +2,7 @@
 
 This repository is a **manual demonstration kit**, not an application, seed API or deployment repository. Follow it in an already running EPM instance. Every entry is synthetic. University names provide a recognizable setting; contractors, correspondence, values, quantities and records are illustrative and are not actual procurement data.
 
-The principal story is a two-storey, approximately 4,000 m² teaching laboratory building, accompanied by equipment procurement for its research laboratories. Construction award: **3,400,000,000 IQD** (about 850,000 IQD per gross m² as a scenario assumption, not a market quotation). Equipment award: **285,000,000 IQD**. Estimates include the scope stated in each BOQ line; a lump sum is a defined package, not an unexplained contingency.
+The principal story is a two-storey, approximately 4,000 m² teaching laboratory building, accompanied by equipment procurement for its research laboratories. Construction award: **3,400,000,000 IQD** (about 850,000 IQD per gross m² as a scenario assumption, not a market quotation). Equipment award: **215,600 USD**. Estimates include the scope stated in each BOQ line; a lump sum is a defined package, not an unexplained contingency.
 
 ## Before entering anything
 1. Ask the application owner for the EPM URL and confirmation that this is a demonstration environment.

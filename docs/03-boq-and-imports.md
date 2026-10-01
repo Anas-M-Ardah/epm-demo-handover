@@ -5,13 +5,13 @@ Use the dedicated files, not the data-reference tables or the full guide:
 | Contract | Upload | Expected lines | Expected amount |
 | --- | --- | ---: | ---: |
 | UOB-CIV-2026-041 | [construction-boq.xlsx](../uploads/01-boq/construction-boq.xlsx) | 10 | 3,400,000,000 IQD |
-| UOB-SUP-2026-017 | [supply-boq.xlsx](../uploads/01-boq/supply-boq.xlsx) | 6 | 285,000,000 IQD |
+| UOB-SUP-2026-017 | [supply-boq.xlsx](../uploads/01-boq/supply-boq.xlsx) | 6 | 215,600 USD |
 
 1. As **المستخدم المختص — جامعة بغداد**, open the project and select its contract.
 2. Construction: open **جدول الكميات**. Supply: open **الفقرات التجهيزية** and its BOQ/import action.
 3. Choose **استيراد** and the initial-table type **جدول أولي**.
 4. Upload the matching workbook. Its first worksheet is intentionally the import table; do not move a cover sheet in front of it.
-5. In column mapping, match Code → الرمز; Description → الوصف; Division → الباب; Unit → الوحدة; Qty → الكمية; Rate → السعر. Rates are IQD because the contract is IQD; the file itself does not change the contract currency.
+5. In column mapping, match Code → الرمز; Description → الوصف; Division → الباب; Unit → الوحدة; Qty → الكمية; Rate → السعر. Construction rates are IQD; supply rates are USD. Select the matching contract first: the file does not change its currency. Never import USD rates into an IQD contract.
 6. Review all rows and compare the total above. Submit for approval.
 7. Switch to **مهندس مقيم**, open the submitted version and approve it.
 8. Return to the register. Check the quantities, rates, line amounts and weights. Weights must sum to 100%, allowing the application's stated rounding.

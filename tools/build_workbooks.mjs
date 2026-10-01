@@ -8,7 +8,7 @@ const data=JSON.parse(await fs.readFile(path.join(root,'data/scenario.json'),'ut
 for(const kind of ['construction','supply']) {
  const wb=Workbook.create();
  const sheet=wb.worksheets.add('BOQ');
- const rows=[['Code','Description','Division','Unit','Qty','Rate (IQD)'],...data[kind].map(r=>r.slice(0,6))];
+ const rows=[['Code','Description','Division','Unit','Qty',`Rate (${data.currencies[kind]})`],...data[kind].map(r=>r.slice(0,6))];
  sheet.getRange(`A1:F${rows.length}`).values=rows;
  sheet.getRange(`A1:F${rows.length}`).format.font.name='Arial';
  sheet.getRange(`A1:F${rows.length}`).format.font.size=11;

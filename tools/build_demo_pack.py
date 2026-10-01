@@ -27,24 +27,24 @@ construction=[
  ['C10','منظومة إنذار وإطفاء الحريق والفحص','السلامة','مقطوعية',1,150000000,'A100','Fire safety and commissioning',290,365,0,0],
 ]
 supply=[
- ['S01','مجمد مختبري فائق الانخفاض بسعة 500 لتر','أجهزة حفظ العينات','جهاز',3,45000000,'S10','Ultra low temperature freezer',-70,-10,0,0],
- ['S02','خزانة سلامة أحيائية من الفئة الثانية','أجهزة السلامة','جهاز',2,32000000,'S20','Class II biosafety cabinet',-60,15,0,0],
- ['S03','جهاز طرد مركزي مبرد مع ملحقاته','أجهزة التحضير','جهاز',4,8500000,'S30','Refrigerated centrifuge',-55,20,0,0],
- ['S04','مجهر ضوئي بحثي مع كاميرا رقمية','أجهزة الفحص','جهاز',6,4000000,'S40','Research microscope with camera',-50,-5,0,0],
- ['S05','حاضنة مختبرية بتحكم رقمي','أجهزة الزرع','جهاز',2,9000000,'S50','Digital laboratory incubator',-45,25,0,0],
- ['S06','وحدة طاقة غير منقطعة لحماية الأجهزة','الطاقة الاحتياطية','جهاز',4,2500000,'S60','Laboratory UPS unit',-40,30,0,0],
+ ['S01','مجمد مختبري فائق الانخفاض بسعة 500 لتر','أجهزة حفظ العينات','جهاز',3,34000,'S10','Ultra low temperature freezer',-70,-10,0,0],
+ ['S02','خزانة سلامة أحيائية من الفئة الثانية','أجهزة السلامة','جهاز',2,24000,'S20','Class II biosafety cabinet',-60,15,0,0],
+ ['S03','جهاز طرد مركزي مبرد مع ملحقاته','أجهزة التحضير','جهاز',4,6500,'S30','Refrigerated centrifuge',-55,20,0,0],
+ ['S04','مجهر ضوئي بحثي مع كاميرا رقمية','أجهزة الفحص','جهاز',6,3000,'S40','Research microscope with camera',-50,-5,0,0],
+ ['S05','حاضنة مختبرية بتحكم رقمي','أجهزة الزرع','جهاز',2,7000,'S50','Digital laboratory incubator',-45,25,0,0],
+ ['S06','وحدة طاقة غير منقطعة لحماية الأجهزة','الطاقة الاحتياطية','جهاز',4,1900,'S60','Laboratory UPS unit',-40,30,0,0],
 ]
 for rows in (construction,supply):
  for r in rows: assert r[4]>0 and r[5]>0
 C=sum(r[4]*r[5] for r in construction);S=sum(r[4]*r[5] for r in supply)
-assert C==3400000000 and S==285000000
+assert C==3400000000 and S==215600
 earned1=sum(Decimal(r[4]*r[5])*Decimal(r[10])/100 for r in construction)
 earned2=sum(Decimal(r[4]*r[5])*Decimal(r[11])/100 for r in construction)
 assert earned1==504000000 and earned2==645000000
-data={'asOf':str(D),'synthetic':True,'currency':'IQD','construction':construction,'supply':supply,
+data={'asOf':str(D),'synthetic':True,'currencies':{'construction':'IQD','supply':'USD'},'projectBudgetCurrency':'IQD','construction':construction,'supply':supply,
  'totals':{'constructionAward':C,'supplyAward':S,'constructionEarnedPeriod1':int(earned1),'constructionEarnedPeriod2':int(earned2),
  'constructionProgress1':float(earned1/C*100),'constructionProgress2':float(earned2/C*100),
- 'changeDelta':11100000,'changedConstructionBoq':3411100000,'constructionOriginalContract':3910000000,'constructionEffectiveContractAfterChange':3921100000,'supplyOriginalContract':327750000},
+ 'changeDelta':11100000,'changedConstructionBoq':3411100000,'constructionOriginalContract':3910000000,'constructionEffectiveContractAfterChange':3921100000,'supplyOriginalContract':247940},
  'dates':{'D':str(D),'Dplus30':day(30),'Dplus60':day(60),'overdueLetter':day(-16)}}
 write('data/scenario.json',json.dumps(data,ensure_ascii=False,indent=2))
 
@@ -78,7 +78,7 @@ def chapter(filename,title,body):
 chapter('00-start-here.md','Start here',f'''
 This repository is a **manual demonstration kit**, not an application, seed API or deployment repository. Follow it in an already running EPM instance. Every entry is synthetic. University names provide a recognizable setting; contractors, correspondence, values, quantities and records are illustrative and are not actual procurement data.
 
-The principal story is a two-storey, approximately 4,000 m² teaching laboratory building, accompanied by equipment procurement for its research laboratories. Construction award: **3,400,000,000 IQD** (about 850,000 IQD per gross m² as a scenario assumption, not a market quotation). Equipment award: **285,000,000 IQD**. Estimates include the scope stated in each BOQ line; a lump sum is a defined package, not an unexplained contingency.
+The principal story is a two-storey, approximately 4,000 m² teaching laboratory building, accompanied by equipment procurement for its research laboratories. Construction award: **3,400,000,000 IQD** (about 850,000 IQD per gross m² as a scenario assumption, not a market quotation). Equipment award: **215,600 USD**. Estimates include the scope stated in each BOQ line; a lump sum is a defined package, not an unexplained contingency.
 
 ## Before entering anything
 1. Ask the application owner for the EPM URL and confirmation that this is a demonstration environment.
@@ -153,25 +153,28 @@ Save each project, record its generated ID, and check that its data date is **{D
 ## Create contracts
 Stay in the same role. Open each project → **العقود → إضافة عقد جديد**.
 
-'''+table(['Field','Construction','Supply'],[
-['رمز العقد','UOB-CIV-2026-041','UOB-SUP-2026-017'],['اسم العقد','عقد إنشاء مبنى المختبرات التعليمية','عقد تجهيز مختبرات البحث العلمي'],['المكوّن','المكوّن المدني','المكوّن التجهيزي'],['الحالة','مستمر','مستمر'],['العملة','IQD — الدينار العراقي','IQD — الدينار العراقي'],
-['مبلغ الإحالة','3400000000','285000000'],['الاحتياط','340000000','28500000'],['مبلغ الإشراف','170000000','14250000'],['مبلغ المراقبة','0','0'],
+'''+table(['Field','Construction IQD','Supply USD'],[
+['رمز العقد','UOB-CIV-2026-041','UOB-SUP-2026-017'],['اسم العقد','عقد إنشاء مبنى المختبرات التعليمية','عقد تجهيز مختبرات البحث العلمي'],['المكوّن','المكوّن المدني','المكوّن التجهيزي'],['الحالة','مستمر','مستمر'],['العملة','IQD — الدينار العراقي','USD — الدولار الأمريكي'],
+['مبلغ الإحالة (Construction IQD / Supply USD)','3400000000','215600'],['الاحتياط (Construction IQD / Supply USD)','340000000','21560'],['مبلغ الإشراف (Construction IQD / Supply USD)','170000000','10780'],['مبلغ المراقبة','0','0'],
 ['تاريخ المباشرة',day(-180),day(-90)],['تاريخ الإنجاز',day(365),day(45)],
 ['المقاول / المجهز','شركة روافد الجادرية للمقاولات','شركة مدار المختبر للتجهيز العلمي'],['الجهة المنفذة','قسم الشؤون الهندسية — جامعة بغداد','شعبة التجهيز — جامعة بغداد'],['الاستشاري','مكتب آفاق الجادرية للاستشارات الهندسية','مكتب آفاق الجادرية للاستشارات الهندسية'],['كتاب الإحالة','UOB-ENG-2026-041','UOB-SUP-2026-017'],['تاريخ الكتاب',day(-190),day(-100)],['التواصل','contracts.civil@example.org','contracts.supply@example.org']])+'''
 
 These contractor names and contact addresses are fictional. Do not substitute actual vendors without authorization.
 
-**Checkpoint:** original awards are 3,400,000,000 and 285,000,000 IQD. The original contract values are **3,910,000,000 IQD** and **327,750,000 IQD**: award + reserve + the combined supervision/monitoring amount. For this scenario there is no separately entered monitoring charge: enter monitoring as 0. The checked implementation calculates original contract value from award + reserve + supervision. Its finance screens group supervision/monitoring; do not add a fourth amount to the expected total. A nonzero separate monitoring amount needs clarification of that field's intended treatment before another scenario uses it. The BOQs match the award amounts, not the totals including reserves and supervision. If a code is already used, stop and record a new run suffix consistently; never edit an existing contract to fit this exercise.
+**Checkpoint:** original awards are 3,400,000,000 IQD and 215,600 USD. The original contract values are **3,910,000,000 IQD** and **247,940 USD**: award + reserve + the combined supervision/monitoring amount. For this scenario there is no separately entered monitoring charge: enter monitoring as 0. The checked implementation calculates original contract value from award + reserve + supervision. Its finance screens group supervision/monitoring; do not add a fourth amount to the expected total. A nonzero separate monitoring amount needs clarification of that field's intended treatment before another scenario uses it. The BOQs match the award amounts, not the totals including reserves and supervision. If a code is already used, stop and record a new run suffix consistently; never edit an existing contract to fit this exercise.
 
 ## Set the official project financial basis
 Switch to **محلل موازنة** → each project's **الموقف المالي → تعديل**. Enter:
 '''+table(['Field','Construction IQD','Supply IQD'],[['الكلفة المقررة','4000000000','330000000'],['الكلفة المعدلة','4100000000','330000000'],[f'تخصيص السنة {D.year}','2200000000','300000000'],['حالة المناقلة','لا توجد','لا توجد']])+'''
 
+The supply project budget and annual allocation are still entered in IQD, even though its contract is USD. These are separately approved budget inputs, not converted contract fields.
+
 Save and reopen the financial page. Annual allocation and revised cost are separate recorded figures; neither is automatically the sum of contracts. All payments in this kit remain inside both limits.
 ''')
 
 for label,rows in [('construction',construction),('supply',supply)]:
- write(f'data/{label}-boq.md','# '+label.title()+' BOQ inputs\n\nAll quantities are native units; every rate and amount below is IQD.\n\n'+table(['Code','Arabic description','Division','Unit','Quantity','Rate IQD','Amount IQD','Activity'],[[*r[:6],r[4]*r[5],r[6]] for r in rows]))
+ currency='IQD' if label=='construction' else 'USD'
+ write(f'data/{label}-boq.md','# '+label.title()+' BOQ inputs\n\nAll quantities are native units; every rate and amount below is '+currency+'.\n\n'+table(['Code','Arabic description','Division','Unit','Quantity','Rate '+currency,'Amount '+currency,'Activity'],[[*r[:6],r[4]*r[5],r[6]] for r in rows]))
 
 chapter('03-boq-and-imports.md','Import and approve bills of quantities','''
 Use the dedicated files, not the data-reference tables or the full guide:
@@ -179,13 +182,13 @@ Use the dedicated files, not the data-reference tables or the full guide:
 | Contract | Upload | Expected lines | Expected amount |
 | --- | --- | ---: | ---: |
 | UOB-CIV-2026-041 | [construction-boq.xlsx](../uploads/01-boq/construction-boq.xlsx) | 10 | 3,400,000,000 IQD |
-| UOB-SUP-2026-017 | [supply-boq.xlsx](../uploads/01-boq/supply-boq.xlsx) | 6 | 285,000,000 IQD |
+| UOB-SUP-2026-017 | [supply-boq.xlsx](../uploads/01-boq/supply-boq.xlsx) | 6 | 215,600 USD |
 
 1. As **المستخدم المختص — جامعة بغداد**, open the project and select its contract.
 2. Construction: open **جدول الكميات**. Supply: open **الفقرات التجهيزية** and its BOQ/import action.
 3. Choose **استيراد** and the initial-table type **جدول أولي**.
 4. Upload the matching workbook. Its first worksheet is intentionally the import table; do not move a cover sheet in front of it.
-5. In column mapping, match Code → الرمز; Description → الوصف; Division → الباب; Unit → الوحدة; Qty → الكمية; Rate → السعر. Rates are IQD because the contract is IQD; the file itself does not change the contract currency.
+5. In column mapping, match Code → الرمز; Description → الوصف; Division → الباب; Unit → الوحدة; Qty → الكمية; Rate → السعر. Construction rates are IQD; supply rates are USD. Select the matching contract first: the file does not change its currency. Never import USD rates into an IQD contract.
 6. Review all rows and compare the total above. Submit for approval.
 7. Switch to **مهندس مقيم**, open the submitted version and approve it.
 8. Return to the register. Check the quantities, rates, line amounts and weights. Weights must sum to 100%, allowing the application's stated rounding.
@@ -204,7 +207,7 @@ For each contract, use **المستخدم المختص — جامعة بغداد
 | Contract | File | Expected activity count | Cost |
 | --- | --- | ---: | ---: |
 | UOB-CIV-2026-041 | [construction-baseline.xer](../uploads/02-schedules/construction-baseline.xer) | 11 including M900 | 3,400,000,000 IQD |
-| UOB-SUP-2026-017 | [supply-baseline.xer](../uploads/02-schedules/supply-baseline.xer) | 7 including M900 | 285,000,000 IQD |
+| UOB-SUP-2026-017 | [supply-baseline.xer](../uploads/02-schedules/supply-baseline.xer) | 7 including M900 | 215,600 USD |
 
 1. Select Primavera XER, cost weighting and **خط أساس**.
 2. Review activity IDs, WBS groups, dates, costs, calendars and relationships.
@@ -432,7 +435,7 @@ When approved, first show that original/effective contract values have not chang
 ## Supply difference and zero-value redistribution
 Use untouched S06 in UOB-SUP-2026-017. Ensure the technology university is an allowed beneficiary. Create a supply redistribution moving **1 UPS** from Baghdad to the technology university. Attach `supply-redistribution-justification.pdf`; proposals and approved days are **0 monetary impact / 0 days**.
 
-The technical party is **لجنة الفحص والاستلام**, not **دائرة المهندس المقيم**. Before applying: Baghdad 4 / technology university 0. After the approved order is applied: **Baghdad 3 / technology university 1**, contracted total remains 4 and supply BOQ/award component remains **285,000,000 IQD** and effective contract value remains **327,750,000 IQD**.
+The technical party is **لجنة الفحص والاستلام**, not **دائرة المهندس المقيم**. Before applying: Baghdad 4 / technology university 0. After the approved order is applied: **Baghdad 3 / technology university 1**, contracted total remains 4 and supply BOQ/award component remains **215,600 USD** and effective contract value remains **247,940 USD**.
 
 The pricing committee still records an explicit decision for a zero-value order. Explicitly confirm the S06 line's fixed zero effect (approved quantity delta 0), leave rate and excess rate blank, and enter approved days 0; do not invent a positive price proposal, skip a stage, or add a dummy quantity to bypass validation. If this path is unavailable, stop and report a deployment-version gap. This was a previously identified bug and must not be demonstrated as a valid business rule.
 ''')
@@ -515,7 +518,18 @@ After application of the construction change, effective contract value becomes *
 - For supply, warehouse, preliminary and final quantities are stage totals for the same devices. Read their labels before explaining a percentage.
 
 ## Currency display
-Every monetary figure should identify IQD or USD. Display conversion does not change the contract's native currency. Read the configured rate/date/source shown by the app; do not call it a live market feed. If the configured quote is 1 USD = 1,310 IQD, 3,400,000,000 IQD displays as about 2,595,419.85 USD. If the quote differs, the displayed conversion should differ. The numeric tables above remain native IQD.
+
+## Demonstrate native USD and converted IQD
+1. Open supply contract **UOB-SUP-2026-017** and show **USD — الدولار الأمريكي**. Confirm award **215,600 USD**, reserve **21,560 USD**, supervision **10,780 USD**, and total **247,940 USD**.
+2. Open its BOQ. S01 is **3 × 34,000 USD = 102,000 USD**; S04 is **6 × 3,000 USD = 18,000 USD**. The six lines total **215,600 USD**.
+3. Show the supply schedule: its imported cost total is **215,600 USD**. Importing a schedule does not convert its numeric costs.
+4. Show the displayed exchange-rate source and date, then compare the IQD equivalent. Use the quote actually shown by EPM. For illustration only, at **1 USD = 1,310 IQD**, the award is **282,436,000 IQD** and the all-component contract is **324,801,400 IQD**. These are display equivalents, not values to paste into USD fields.
+5. Compare with the separately recorded **330,000,000 IQD** project budget and **300,000,000 IQD** annual allocation. Their amounts do not change the contract currency. If the active quote differs, explain the resulting conversion and budget headroom rather than changing the contract to force a match.
+6. Return to construction and show its native **IQD** label. Never total both projects by adding their unconverted native values. The supply redistribution stays **0 USD** and does not change its contract total.
+
+If a supply contract was already created in IQD using the earlier edition, use a new USD contract for this run (with a unique suffix if needed), then import this edition’s USD workbook and schedule. Do not merely relabel old IQD amounts as USD or mix editions.
+
+Every monetary figure should identify IQD or USD. Display conversion does not change the contract's native currency. Read the configured rate/date/source shown by the app; do not call it a live market feed. If the configured quote is 1 USD = 1,310 IQD, 3,400,000,000 IQD displays as about 2,595,419.85 USD. If the quote differs, the displayed conversion should differ. Construction amounts remain native IQD; supply contract, BOQ and schedule costs remain native USD. Project budget and allocation inputs remain IQD. Do not add raw USD and IQD amounts together.
 
 ## Suggested eight-minute ending
 1. Portfolio and project grouping: ownership and visibility (one minute).
@@ -566,7 +580,7 @@ A documentation-only kit for your manager to build and demonstrate a complete EP
 - [Acceptance checklist](checklists/acceptance.md) and [troubleshooting](TROUBLESHOOTING.md).
 - [Validation status](validation/README.md): what was checked and what still needs a rehearsal in your deployed instance.
 
-Begin with the two principal projects. The optional portfolio extension comes after the full cycle, not before it. All monetary input tables explicitly use IQD. This material is synthetic and is not procurement advice or an approved engineering design.
+Begin with the two principal projects. The optional portfolio extension comes after the full cycle, not before it. All monetary inputs identify their currency: construction IQD, supply contract USD, and project budget/allocation IQD. This material is synthetic and is not procurement advice or an approved engineering design.
 ''')
 write('FULL-WALKTHROUGH.md','# EPM complete demonstration walkthrough\n\nReference data date: '+str(D)+'\n\n'+ '\n\n'.join(text.replace('](../','](').replace('](0','](docs/0') for _,_,text in chapters))
 write('checklists/session-record.md','''# Demonstration session record
@@ -696,7 +710,7 @@ evidence('06-changes/supply-redistribution-justification.pdf','UPS beneficiary r
  'Contract UOB-SUP-2026-017; item S06; four UPS devices, no receipts against this line.',
  'Proposal: transfer one allocated device from University of Baghdad to University of Technology.',
  'Before: Baghdad 4, Technology 0. After application: Baghdad 3, Technology 1.',
- 'Total quantity 4, unit rate 2,500,000 IQD, total 10,000,000 IQD: unchanged.',
+ 'Total quantity 4, unit rate 1,900 USD, total 7,600 USD: unchanged.',
  'Price impact zero; schedule impact zero. Explicit committee approval and beneficiary eligibility are still required.'])
 for rev in [1,2]:
  evidence(f'07-documents/foundation-note-r{rev}.pdf',f'Foundation design and level review note — revision {rev}',[
@@ -715,7 +729,7 @@ evidence('08-meetings/coordination-minutes.pdf','Civil works and equipment coord
  'Close actions only against evidence. Attendance, decisions and signatures here are illustrative; record actual demo-role actions in EPM.'])
 
 write('data/evidence-content.json',json.dumps(pdfs,ensure_ascii=False,indent=2))
-write('validation/calculations.json',json.dumps({'asOf':str(D),'constructionBoqIQD':C,'supplyBoqIQD':S,'earned1IQD':int(earned1),'earned2IQD':int(earned2),'progress1Pct':float(earned1/C*100),'progress2Pct':float(earned2/C*100),'paidAfter101IQD':200000000,'paidAfter102IQD':350000000,'financialAfterBothPct':350000000/4100000000*100,'allocationUsePct':350000000/2200000000*100,'changeWithinAllowanceIQD':500*18000,'changeExcessIQD':100*21000,'changeTotalIQD':11100000,'expectedSlaElapsedDays':16,'expectedSlaCapDays':7,'expectedSlaOverdueDays':9},indent=2))
+write('validation/calculations.json',json.dumps({'asOf':str(D),'constructionBoqIQD':C,'supplyBoqUSD':S,'earned1IQD':int(earned1),'earned2IQD':int(earned2),'progress1Pct':float(earned1/C*100),'progress2Pct':float(earned2/C*100),'paidAfter101IQD':200000000,'paidAfter102IQD':350000000,'financialAfterBothPct':350000000/4100000000*100,'allocationUsePct':350000000/2200000000*100,'changeWithinAllowanceIQD':500*18000,'changeExcessIQD':100*21000,'changeTotalIQD':11100000,'expectedSlaElapsedDays':16,'expectedSlaCapDays':7,'expectedSlaOverdueDays':9},indent=2))
 write('.gitignore','''__pycache__/
 node_modules/
 .env

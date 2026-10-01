@@ -34,7 +34,7 @@ A documentation-only kit for your manager to build and demonstrate a complete EP
 - [Acceptance checklist](checklists/acceptance.md) and [troubleshooting](TROUBLESHOOTING.md).
 - [Validation status](validation/README.md): what was checked and what still needs a rehearsal in your deployed instance.
 
-Begin with the two principal projects. The optional portfolio extension comes after the full cycle, not before it. All monetary input tables explicitly use IQD. This material is synthetic and is not procurement advice or an approved engineering design.
+Begin with the two principal projects. The optional portfolio extension comes after the full cycle, not before it. Construction uses IQD; the supply contract uses USD. Project budgets and allocations remain IQD. This material is synthetic and is not procurement advice or an approved engineering design.
 
 ## Standalone documentation website
 
