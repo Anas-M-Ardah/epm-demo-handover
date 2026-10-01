@@ -34,9 +34,10 @@ if((await downloadPromise).suggestedFilename()!=='EPM-session-record.txt')throw 
 await page.setViewportSize({width:1440,height:1050});
 await page.goto(base+'#02-projects-and-contracts');
 await page.locator('.copy-cell').first().click();
-if(!(await page.locator('#toast').textContent()).startsWith('Copied'))throw new Error('Copy failed');
+await page.waitForFunction(()=>document.querySelector('#toast').textContent.startsWith('Copied'));
 const content=await page.evaluate(()=>window.EPM);
 for(const p of content.pages){await page.goto(base+'#'+p.id);for(const href of await page.locator('main a').evaluateAll(es=>es.map(e=>e.getAttribute('href')))){if(href.startsWith('#')){const id=href.slice(1).split('~')[0];if(!['home','files','notebook',...content.pages.map(x=>x.id)].includes(id))throw new Error('Broken chapter '+href)}else if(!/^(https?:|mailto:)/.test(href)&&!fs.existsSync(path.join(root,decodeURIComponent(href))))throw new Error('Missing target '+href)}}
 if(errors.length)throw new Error(errors.join('; '));
 console.log(JSON.stringify({errors,status:'Passed offline navigation, persistence, search, filters and responsive overflow checks'}));await browser.close();
+
 
