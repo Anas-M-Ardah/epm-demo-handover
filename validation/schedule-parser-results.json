@@ -1,0 +1,65 @@
+[
+  {
+    "file": "construction-baseline.xer",
+    "activities": 11,
+    "total": 3400000000,
+    "calendar": {
+      "code": "CAL6",
+      "name": "Saturday to Thursday 8h",
+      "workDays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "hoursPerDay": 8,
+      "isDefault": true,
+      "exceptions": []
+    },
+    "relationships": 10
+  },
+  {
+    "file": "construction-current-update.xer",
+    "activities": 11,
+    "total": 3400000000,
+    "calendar": {
+      "code": "CAL6",
+      "name": "Saturday to Thursday 8h",
+      "workDays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "hoursPerDay": 8,
+      "isDefault": true,
+      "exceptions": []
+    },
+    "relationships": 10
+  },
+  {
+    "file": "supply-baseline.xer",
+    "activities": 7,
+    "total": 285000000,
+    "calendar": {
+      "code": "CAL6",
+      "name": "Saturday to Thursday 8h",
+      "workDays": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "hoursPerDay": 8,
+      "isDefault": true,
+      "exceptions": []
+    },
+    "relationships": 6
+  }
+]

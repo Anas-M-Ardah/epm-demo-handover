@@ -1,0 +1,19 @@
+{
+  "asOf": "2026-10-01",
+  "constructionBoqIQD": 3400000000,
+  "supplyBoqIQD": 285000000,
+  "earned1IQD": 504000000,
+  "earned2IQD": 645000000,
+  "progress1Pct": 14.823529411764707,
+  "progress2Pct": 18.970588235294116,
+  "paidAfter101IQD": 200000000,
+  "paidAfter102IQD": 350000000,
+  "financialAfterBothPct": 8.536585365853659,
+  "allocationUsePct": 15.909090909090908,
+  "changeWithinAllowanceIQD": 9000000,
+  "changeExcessIQD": 2100000,
+  "changeTotalIQD": 11100000,
+  "expectedSlaElapsedDays": 16,
+  "expectedSlaCapDays": 7,
+  "expectedSlaOverdueDays": 9
+}

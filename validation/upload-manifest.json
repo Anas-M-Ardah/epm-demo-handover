@@ -1,0 +1,158 @@
+[
+  {
+    "file": "uploads/01-boq/construction-boq.xlsx",
+    "bytes": 4493,
+    "sha256": "b538745c18072d8e71a751daad3ce43f562db9a7ecedf2d54f0c82554b74aa19",
+    "use": "Chapter 03 — BOQ import; retain original through Documents if required"
+  },
+  {
+    "file": "uploads/01-boq/supply-boq.xlsx",
+    "bytes": 4270,
+    "sha256": "d54f313d4481342e2a1f5b7e7401399df32bad6eb7750d0f8946d456b29eec68",
+    "use": "Chapter 03 — BOQ import; retain original through Documents if required"
+  },
+  {
+    "file": "uploads/02-schedules/construction-baseline.xer",
+    "bytes": 2938,
+    "sha256": "7252b917dd889aefa168342b58531e0e97f7ab1ab2e1ab4ecfae45c42cc264a7",
+    "use": "Chapter 04 — schedule import; initial baseline or current update as named"
+  },
+  {
+    "file": "uploads/02-schedules/construction-current-update.xer",
+    "bytes": 2938,
+    "sha256": "a604c8bd228d2d3454d2a7a7b9a6cac412ad8947238a01701ee571d102c86c59",
+    "use": "Chapter 04 — schedule import; initial baseline or current update as named"
+  },
+  {
+    "file": "uploads/02-schedules/supply-baseline.xer",
+    "bytes": 2140,
+    "sha256": "f9d3a7722b116c840593057a0af7e191a88d2839249a45459432e2c5b162d4af",
+    "use": "Chapter 04 — schedule import; initial baseline or current update as named"
+  },
+  {
+    "file": "uploads/03-evidence/construction-measurement-period-1.pdf",
+    "bytes": 2560,
+    "sha256": "722e0b05e62833b9d502ec0812758006ee45d1718f1286f163ae6641ef5473dc",
+    "use": "Chapters 05 and 09 — progress-reading evidence"
+  },
+  {
+    "file": "uploads/03-evidence/construction-measurement-period-2.pdf",
+    "bytes": 2444,
+    "sha256": "23b0a657d38c165c35b9e9fab83cd130115b7b9714ed6bbe5c0952d6e67a29d7",
+    "use": "Chapters 05 and 09 — progress-reading evidence"
+  },
+  {
+    "file": "uploads/04-supply/S01-correction.pdf",
+    "bytes": 2341,
+    "sha256": "1830c4c654a804d7cd0081be3ea22a9763ee18bf8072c08024302ebcc723325e",
+    "use": "Chapter 06 — matching readiness, warehouse, preliminary, correction or acceptance record"
+  },
+  {
+    "file": "uploads/04-supply/S01-final.pdf",
+    "bytes": 2341,
+    "sha256": "83721d5a7d6115c64925c1b0b51e3d3b4d8d3c9ae1afc77d658fcfb7c50f915f",
+    "use": "Chapter 06 — matching readiness, warehouse, preliminary, correction or acceptance record"
+  },
+  {
+    "file": "uploads/04-supply/S01-nonconformity.pdf",
+    "bytes": 2350,
+    "sha256": "6b4bce28e062f1a96f4a845ba9cef1a26c20f2d97f6abb0c9030fa3490bfe4e4",
+    "use": "Chapter 06 — matching readiness, warehouse, preliminary, correction or acceptance record"
+  },
+  {
+    "file": "uploads/04-supply/S01-readiness.pdf",
+    "bytes": 2294,
+    "sha256": "b185ea1fcab3bd2638a8453ed5487b2208289c0f51dd2c9d0e1635572063802a",
+    "use": "Chapter 06 — matching readiness, warehouse, preliminary, correction or acceptance record"
+  },
+  {
+    "file": "uploads/04-supply/S01-reinspection.pdf",
+    "bytes": 2352,
+    "sha256": "a264f4925b49313a4c09ba663f7219ab4c3464773d6e8222dae51e3cfcca4d00",
+    "use": "Chapter 06 — matching readiness, warehouse, preliminary, correction or acceptance record"
+  },
+  {
+    "file": "uploads/04-supply/S01-warehouse.pdf",
+    "bytes": 2314,
+    "sha256": "d90667f4149ea10b39690714b015d51156565817c5ae136ccca5ed5726cb8e93",
+    "use": "Chapter 06 — matching readiness, warehouse, preliminary, correction or acceptance record"
+  },
+  {
+    "file": "uploads/04-supply/S04-final.pdf",
+    "bytes": 2340,
+    "sha256": "6b896ab453a9f9946a946d0cde0045198fba294fd29b3f69a946c240100d0634",
+    "use": "Chapter 06 — matching readiness, warehouse, preliminary, correction or acceptance record"
+  },
+  {
+    "file": "uploads/04-supply/S04-preliminary.pdf",
+    "bytes": 2335,
+    "sha256": "8aeca6b8a7ddc637569a8f3f87706cda504af1e6333aea85184e8b5db176a480",
+    "use": "Chapter 06 — matching readiness, warehouse, preliminary, correction or acceptance record"
+  },
+  {
+    "file": "uploads/04-supply/S04-readiness.pdf",
+    "bytes": 2291,
+    "sha256": "69d6bf7485f843fdbd3b21a3c601b442aa00c7dbe610c58ceecefc13c21dd926",
+    "use": "Chapter 06 — matching readiness, warehouse, preliminary, correction or acceptance record"
+  },
+  {
+    "file": "uploads/04-supply/S04-warehouse.pdf",
+    "bytes": 2309,
+    "sha256": "3abbb740a30931a6529b4027e36c2d87beb0d693038a4384616812f7dbff91a4",
+    "use": "Chapter 06 — matching readiness, warehouse, preliminary, correction or acceptance record"
+  },
+  {
+    "file": "uploads/05-finance/payment-101-letter.pdf",
+    "bytes": 2563,
+    "sha256": "8dfc1005d5465d146afbe1e21fabca76ce817939a00aa64096f99dec8737ce47",
+    "use": "Chapter 07 — matching financial letter / contract measurement slot"
+  },
+  {
+    "file": "uploads/05-finance/payment-101-measurement.pdf",
+    "bytes": 2573,
+    "sha256": "6a4f2780e59837cc7c5773a05c341b1b0f94b3e6d4010812cc814b691071d978",
+    "use": "Chapter 07 — matching financial letter / contract measurement slot"
+  },
+  {
+    "file": "uploads/05-finance/payment-102-letter.pdf",
+    "bytes": 2562,
+    "sha256": "899455fd6fac762760a59ddf3aafe749dcffdbc04276fcbbd14d72cf0e20b659",
+    "use": "Chapter 07 — matching financial letter / contract measurement slot"
+  },
+  {
+    "file": "uploads/05-finance/payment-102-measurement.pdf",
+    "bytes": 2570,
+    "sha256": "34936e3b8697075d62828afffe117a1618ba911fd860ffbe8fc92e739d0de66f",
+    "use": "Chapter 07 — matching financial letter / contract measurement slot"
+  },
+  {
+    "file": "uploads/06-changes/construction-quantity-justification.pdf",
+    "bytes": 2537,
+    "sha256": "d3e605f70338520f52abedc1072e9fd0e2bd47d64685c5ad686af2f80a0d53ad",
+    "use": "Chapter 10 — change-order attachments"
+  },
+  {
+    "file": "uploads/06-changes/supply-redistribution-justification.pdf",
+    "bytes": 2425,
+    "sha256": "f76ff7c98d91ee2860fdb6d9bfcdcb0aa67f21701eba63fe2b9eef5d23e4c1e6",
+    "use": "Chapter 10 — change-order attachments"
+  },
+  {
+    "file": "uploads/07-documents/foundation-note-r1.pdf",
+    "bytes": 2549,
+    "sha256": "919289e065dc5d305078b795ab425c811a819a89417cc65a7a983632b4817a2d",
+    "use": "Chapter 11 — document revision; original file bytes required"
+  },
+  {
+    "file": "uploads/07-documents/foundation-note-r2.pdf",
+    "bytes": 2591,
+    "sha256": "bf91b955bdabeb4afefff97d32abe648460b9f9a44880e63e71c1bbc7191cbaa",
+    "use": "Chapter 11 — document revision; original file bytes required"
+  },
+  {
+    "file": "uploads/08-meetings/coordination-minutes.pdf",
+    "bytes": 2538,
+    "sha256": "ff8460780cefbe4e39695996755fae912f4868b5925a6ec04ff58c2ffa00d148",
+    "use": "Chapter 12 — register as ordinary document; structured meeting is read-only unless preprepared"
+  }
+]
