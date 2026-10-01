@@ -32,3 +32,9 @@ The schedule files target the EPM importer; a round trip through Autodesk Primav
 | Alerts | SlaAlertAutomationService and project alert endpoints | Background evaluation exists; external channel records may still be simulated |
 
 The historical video guides and old runsheets were not treated as authoritative where they disagreed with current code. The kit explicitly avoids their outdated all-in-one receipt role and two-finance-role assumptions.
+
+## Static website checks
+
+The HTML/CSS/JavaScript handbook was tested directly over `file://` in Chrome, without a server. Checks covered all 21 chapter/reference pages, their local links, 26 upload cards, PDF/XLSX/XER filtering, text search, clipboard copy, session-record export, persisted notes and chapter/checklist completion. No JavaScript page errors were observed. Screenshots were visually reviewed for the home page, a data-heavy chapter and the mobile home page. Page overflow was checked at 375, 768, 1024 and 1440 pixels for home, reader, library and notebook.
+
+These website checks do not replace the business-flow rehearsal in the target EPM instance described above. Browser-local notes are not centrally stored. Export each session record before clearing browser data or switching devices.

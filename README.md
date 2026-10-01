@@ -6,9 +6,10 @@ A documentation-only kit for your manager to build and demonstrate a complete EP
 
 ## Start
 1. Download/extract the repository ZIP.
-2. Read [Start here](docs/00-start-here.md).
-3. Fill the [session record](checklists/session-record.md).
-4. Follow chapters in numerical order. [Full walkthrough in one copyable document](FULL-WALKTHROUGH.md).
+2. Open **[index.html](index.html)** in Chrome or Edge. It is a complete HTML/CSS/JavaScript handbook and works offline.
+3. Begin with **Start here**, then follow the chapter sequence. Use the upload library to view/download supporting files.
+4. Fill the **Session notebook** in the website, then export it. Entries and completion marks stay in your browser; they are not shared automatically.
+5. Follow chapters in numerical order. [Full walkthrough in one copyable document](FULL-WALKTHROUGH.md).
 
 ## Chapters
 1. [Start here](docs/00-start-here.md)
@@ -34,3 +35,9 @@ A documentation-only kit for your manager to build and demonstrate a complete EP
 - [Validation status](validation/README.md): what was checked and what still needs a rehearsal in your deployed instance.
 
 Begin with the two principal projects. The optional portfolio extension comes after the full cycle, not before it. All monetary input tables explicitly use IQD. This material is synthetic and is not procurement advice or an approved engineering design.
+
+## Standalone documentation website
+
+This folder is its own Git repository. The website uses local assets, including Cairo with its font license. It needs no application server, API, account, build step or internet connection to read. Extract the entire ZIP before opening `index.html`; keep its folders together. Any static host can serve the same root folder.
+
+Features: full-text search, sequential chapters, copyable input cells, PDF viewing/downloads, print-friendly guides, a local session notebook, and saved completion/acceptance checklists. Changing browser or clearing browser storage will not retain session notes; export them after each run. Markdown files remain the editable source and fallback.
