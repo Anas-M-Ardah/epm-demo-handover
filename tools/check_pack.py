@@ -22,7 +22,7 @@ for kind,expected_count,expected_total in [('construction',10,3400000000),('supp
    total+=Decimal(values['E'])*Decimal(values['F'])
   assert len(rows)-1==expected_count and total==expected_total,(kind,len(rows),total)
  checks.append(f'{kind}: {expected_count} workbook rows; total {expected_total} IQD')
-manifest=json.loads((ROOT/'validation/upload-manifest.json').read_text())
+manifest=json.loads((ROOT/'validation/upload-manifest.json').read_text(encoding='utf-8'))
 for entry in manifest:
  f=ROOT/entry['file']
  if not f.exists() or hashlib.sha256(f.read_bytes()).hexdigest()!=entry['sha256']:errors.append('Changed/missing upload '+entry['file'])

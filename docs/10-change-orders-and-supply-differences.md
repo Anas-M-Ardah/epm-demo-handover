@@ -3,7 +3,7 @@
 Perform this chapter **after** the progress checkpoints, because applying a quantity change can legitimately alter weights and percentages.
 
 ## Construction quantity increase
-As **مهندس مقيم**, open the construction project's **الأوامر التغييرية → إنشاء أمر تغييري** and select DEMO-CIV-26.
+As **مهندس مقيم**, open the construction project's **الأوامر التغييرية → إنشاء أمر تغييري** and select UOB-CIV-2026-041.
 
 | Field | Value |
 | --- | --- |
@@ -54,7 +54,7 @@ When approved, first show that original/effective contract values have not chang
 **Expected after successful application:** effective contract value **3,921,100,000 IQD** (original contract 3,910,000,000 + 11,100,000), and effective BOQ value **3,411,100,000 IQD**, effective C01 quantity **3,100 m³**, original quantity and award retained in history, unchanged contractual finish because approved days are zero. Applying again must not double the change. The official project revised budget remains **4,100,000,000 IQD** until finance separately changes it.
 
 ## Supply difference and zero-value redistribution
-Use untouched S06 in DEMO-SUP-26. Ensure the technology university is an allowed beneficiary. Create a supply redistribution moving **1 UPS** from Baghdad to the technology university. Attach `supply-redistribution-justification.pdf`; proposals and approved days are **0 monetary impact / 0 days**.
+Use untouched S06 in UOB-SUP-2026-017. Ensure the technology university is an allowed beneficiary. Create a supply redistribution moving **1 UPS** from Baghdad to the technology university. Attach `supply-redistribution-justification.pdf`; proposals and approved days are **0 monetary impact / 0 days**.
 
 The technical party is **لجنة الفحص والاستلام**, not **دائرة المهندس المقيم**. Before applying: Baghdad 4 / technology university 0. After the approved order is applied: **Baghdad 3 / technology university 1**, contracted total remains 4 and supply BOQ/award component remains **285,000,000 IQD** and effective contract value remains **327,750,000 IQD**.
 

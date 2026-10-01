@@ -28,7 +28,7 @@ Stay in the same role. Open each project → **العقود → إضافة عق�
 
 | Field | Construction | Supply |
 | --- | --- | --- |
-| رمز العقد | DEMO-CIV-26 | DEMO-SUP-26 |
+| رمز العقد | UOB-CIV-2026-041 | UOB-SUP-2026-017 |
 | اسم العقد | عقد إنشاء مبنى المختبرات التعليمية | عقد تجهيز مختبرات البحث العلمي |
 | المكوّن | المكوّن المدني | المكوّن التجهيزي |
 | الحالة | مستمر | مستمر |
@@ -44,7 +44,7 @@ Stay in the same role. Open each project → **العقود → إضافة عق�
 | الاستشاري | مكتب آفاق الجادرية للاستشارات الهندسية | مكتب آفاق الجادرية للاستشارات الهندسية |
 | كتاب الإحالة | UOB-ENG-2026-041 | UOB-SUP-2026-017 |
 | تاريخ الكتاب | 2026-03-25 | 2026-06-23 |
-| التواصل | civil.demo@example.invalid | supply.demo@example.invalid |
+| التواصل | contracts.civil@example.org | contracts.supply@example.org |
 
 These contractor names and contact addresses are fictional. Do not substitute actual vendors without authorization.
 

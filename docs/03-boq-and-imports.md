@@ -4,8 +4,8 @@ Use the dedicated files, not the data-reference tables or the full guide:
 
 | Contract | Upload | Expected lines | Expected amount |
 | --- | --- | ---: | ---: |
-| DEMO-CIV-26 | [construction-boq.xlsx](../uploads/01-boq/construction-boq.xlsx) | 10 | 3,400,000,000 IQD |
-| DEMO-SUP-26 | [supply-boq.xlsx](../uploads/01-boq/supply-boq.xlsx) | 6 | 285,000,000 IQD |
+| UOB-CIV-2026-041 | [construction-boq.xlsx](../uploads/01-boq/construction-boq.xlsx) | 10 | 3,400,000,000 IQD |
+| UOB-SUP-2026-017 | [supply-boq.xlsx](../uploads/01-boq/supply-boq.xlsx) | 6 | 285,000,000 IQD |
 
 1. As **المستخدم المختص — جامعة بغداد**, open the project and select its contract.
 2. Construction: open **جدول الكميات**. Supply: open **الفقرات التجهيزية** and its BOQ/import action.

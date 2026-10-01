@@ -21,10 +21,10 @@ def footer(canvas,doc):
 inventory=[]
 for path,title,lines in json.loads((ROOT/'data/evidence-content.json').read_text(encoding='utf-8')):
  p=ROOT/'uploads'/path;p.parent.mkdir(parents=True,exist_ok=True)
- story=[Paragraph('EPM / ENGINEERING PROJECT DEMONSTRATION',styles['Eyebrow']),Paragraph(escape(clean(title)),styles['RecordTitle']),HRFlowable(width='100%',thickness=1,color=colors.HexColor('#D3DFE7')),Spacer(1,18)]
+ story=[Paragraph('EPM / PROJECT SUPPORTING RECORD',styles['Eyebrow']),Paragraph(escape(clean(title)),styles['RecordTitle']),HRFlowable(width='100%',thickness=1,color=colors.HexColor('#D3DFE7')),Spacer(1,18)]
  story += [Paragraph(escape(clean(t)),styles['RecordBody']) for t in lines]
  story += [Spacer(1,12),Paragraph('Evidence handling: upload this file to the matching workflow record. Preserve the generated reference and the decision history in EPM.',styles['RecordBody'])]
- SimpleDocTemplate(str(p),pagesize=(595,842),rightMargin=44,leftMargin=44,topMargin=44,bottomMargin=72,title=clean(title),author='EPM Demonstration Kit').build(story,onFirstPage=footer,onLaterPages=footer)
+ SimpleDocTemplate(str(p),pagesize=(595,842),rightMargin=44,leftMargin=44,topMargin=44,bottomMargin=72,title=clean(title),author='EPM Project Records').build(story,onFirstPage=footer,onLaterPages=footer)
  inventory.append({'file':'uploads/'+path,'title':title,'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
 (ROOT/'validation/evidence-files.json').write_text(json.dumps(inventory,indent=2))
 print(f'Created {len(inventory)} PDF evidence files.')

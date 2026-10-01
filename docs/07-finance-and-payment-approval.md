@@ -1,10 +1,10 @@
 # Finance and payment approval
 
-The financial basis in chapter 02 must already be saved. Use construction contract **DEMO-CIV-26**. The current payment wizard records the cost-component distribution and its sum; do not invent a required **نوع الدفعة** selector or a gross/retention form if it is not shown.
+The financial basis in chapter 02 must already be saved. Use construction contract **UOB-CIV-2026-041**. The current payment wizard records the cost-component distribution and its sum; do not invent a required **نوع الدفعة** selector or a gross/retention form if it is not shown.
 
 ## Register the first certificate
 As **مهندس مقيم**, open **الموقف المالي → الدفعات → تسجيل دفعة**.
-1. Select DEMO-CIV-26.
+1. Select UOB-CIV-2026-041.
 2. Enter the three components below.
 3. Enter the official letter number and date.
 4. Upload the financial letter and the measurement sheet in their respective areas.

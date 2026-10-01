@@ -1,107 +1,107 @@
 [
   {
-    "file": "uploads\\03-evidence\\construction-measurement-period-1.pdf",
+    "file": "uploads/03-evidence/construction-measurement-period-1.pdf",
     "pages": 1,
-    "textCharacters": 953
+    "textCharacters": 950
   },
   {
-    "file": "uploads\\03-evidence\\construction-measurement-period-2.pdf",
+    "file": "uploads/03-evidence/construction-measurement-period-2.pdf",
     "pages": 1,
-    "textCharacters": 789
+    "textCharacters": 786
   },
   {
-    "file": "uploads\\04-supply\\S01-correction.pdf",
+    "file": "uploads/04-supply/S01-correction.pdf",
     "pages": 1,
-    "textCharacters": 654
+    "textCharacters": 651
   },
   {
-    "file": "uploads\\04-supply\\S01-final.pdf",
+    "file": "uploads/04-supply/S01-final.pdf",
+    "pages": 1,
+    "textCharacters": 653
+  },
+  {
+    "file": "uploads/04-supply/S01-nonconformity.pdf",
     "pages": 1,
     "textCharacters": 656
   },
   {
-    "file": "uploads\\04-supply\\S01-nonconformity.pdf",
+    "file": "uploads/04-supply/S01-readiness.pdf",
     "pages": 1,
-    "textCharacters": 659
+    "textCharacters": 610
   },
   {
-    "file": "uploads\\04-supply\\S01-readiness.pdf",
+    "file": "uploads/04-supply/S01-reinspection.pdf",
+    "pages": 1,
+    "textCharacters": 665
+  },
+  {
+    "file": "uploads/04-supply/S01-warehouse.pdf",
+    "pages": 1,
+    "textCharacters": 622
+  },
+  {
+    "file": "uploads/04-supply/S04-final.pdf",
+    "pages": 1,
+    "textCharacters": 644
+  },
+  {
+    "file": "uploads/04-supply/S04-preliminary.pdf",
+    "pages": 1,
+    "textCharacters": 630
+  },
+  {
+    "file": "uploads/04-supply/S04-readiness.pdf",
+    "pages": 1,
+    "textCharacters": 601
+  },
+  {
+    "file": "uploads/04-supply/S04-warehouse.pdf",
     "pages": 1,
     "textCharacters": 613
   },
   {
-    "file": "uploads\\04-supply\\S01-reinspection.pdf",
+    "file": "uploads/05-finance/payment-101-letter.pdf",
     "pages": 1,
-    "textCharacters": 668
+    "textCharacters": 985
   },
   {
-    "file": "uploads\\04-supply\\S01-warehouse.pdf",
+    "file": "uploads/05-finance/payment-101-measurement.pdf",
     "pages": 1,
-    "textCharacters": 625
+    "textCharacters": 990
   },
   {
-    "file": "uploads\\04-supply\\S04-final.pdf",
+    "file": "uploads/05-finance/payment-102-letter.pdf",
     "pages": 1,
-    "textCharacters": 647
+    "textCharacters": 984
   },
   {
-    "file": "uploads\\04-supply\\S04-preliminary.pdf",
+    "file": "uploads/05-finance/payment-102-measurement.pdf",
     "pages": 1,
-    "textCharacters": 633
+    "textCharacters": 989
   },
   {
-    "file": "uploads\\04-supply\\S04-readiness.pdf",
+    "file": "uploads/06-changes/construction-quantity-justification.pdf",
     "pages": 1,
-    "textCharacters": 604
+    "textCharacters": 914
   },
   {
-    "file": "uploads\\04-supply\\S04-warehouse.pdf",
+    "file": "uploads/06-changes/supply-redistribution-justification.pdf",
     "pages": 1,
-    "textCharacters": 616
+    "textCharacters": 748
   },
   {
-    "file": "uploads\\05-finance\\payment-101-letter.pdf",
+    "file": "uploads/07-documents/foundation-note-r1.pdf",
     "pages": 1,
-    "textCharacters": 988
+    "textCharacters": 885
   },
   {
-    "file": "uploads\\05-finance\\payment-101-measurement.pdf",
+    "file": "uploads/07-documents/foundation-note-r2.pdf",
     "pages": 1,
-    "textCharacters": 993
+    "textCharacters": 955
   },
   {
-    "file": "uploads\\05-finance\\payment-102-letter.pdf",
+    "file": "uploads/08-meetings/coordination-minutes.pdf",
     "pages": 1,
-    "textCharacters": 987
-  },
-  {
-    "file": "uploads\\05-finance\\payment-102-measurement.pdf",
-    "pages": 1,
-    "textCharacters": 992
-  },
-  {
-    "file": "uploads\\06-changes\\construction-quantity-justification.pdf",
-    "pages": 1,
-    "textCharacters": 917
-  },
-  {
-    "file": "uploads\\06-changes\\supply-redistribution-justification.pdf",
-    "pages": 1,
-    "textCharacters": 751
-  },
-  {
-    "file": "uploads\\07-documents\\foundation-note-r1.pdf",
-    "pages": 1,
-    "textCharacters": 893
-  },
-  {
-    "file": "uploads\\07-documents\\foundation-note-r2.pdf",
-    "pages": 1,
-    "textCharacters": 963
-  },
-  {
-    "file": "uploads\\08-meetings\\coordination-minutes.pdf",
-    "pages": 1,
-    "textCharacters": 954
+    "textCharacters": 946
   }
 ]

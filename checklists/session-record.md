@@ -10,8 +10,8 @@ Copy this document for each run. Do not store passwords here.
 | Workspace reused or created | |
 | Construction project ID | |
 | Supply project ID | |
-| Construction contract code | DEMO-CIV-26 |
-| Supply contract code | DEMO-SUP-26 |
+| Construction contract code | UOB-CIV-2026-041 |
+| Supply contract code | UOB-SUP-2026-017 |
 | BOQ and schedule version numbers | |
 | Letter 101 generated payment number | |
 | Letter 102 generated payment number | |

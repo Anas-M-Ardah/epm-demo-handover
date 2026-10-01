@@ -1,6 +1,6 @@
 # Distribute supply and complete receipt handoffs
 
-Open the supply project's **الفقرات التجهيزية**, contract DEMO-SUP-26. Do not substitute construction progress approval for the physical receipt process.
+Open the supply project's **الفقرات التجهيزية**, contract UOB-SUP-2026-017. Do not substitute construction progress approval for the physical receipt process.
 
 ## Allocate quantities
 As **المستخدم المختص — جامعة بغداد**, allocate all original quantities to **جامعة بغداد**: S01 3, S02 2, S03 4, S04 6, S05 2, S06 4. Save each line. Expected allocated quantities equal contracted quantities, but all received quantities remain zero.
@@ -30,7 +30,7 @@ All files are in `uploads/`. Same-day dates represent a condensed walkthrough, n
 
 **Expected:** warehouse total remains 3; preliminary and final totals are 2. One device remains in warehouse awaiting beneficiary handover. Correction and reinspection do not add stock or erase the original nonconforming record. The other supply lines remain unreceived for later sessions.
 
-If the app provides device-detail fields, enter for S04: model `DM-40`, origin `Germany`, warranty `24 months`, serial range `DEMO-MIC-001` to `DEMO-MIC-006`; these are fictional identifiers, not assertions about a manufacturer. Do not create unsupported fields if the panel lacks them.
+If the app provides device-detail fields, enter for S04: model `DM-40`, origin `Germany`, warranty `24 months`, serial range `UOB-MIC-2026-001` to `UOB-MIC-2026-006`; these are fictional identifiers, not assertions about a manufacturer. Do not create unsupported fields if the panel lacks them.
 
 ## Optional redistribution
 After adding `tu` as an allowed project beneficiary, use the untouched S06 line to move **1 of 4 UPS units** from Baghdad to the technology university through a supply change order in chapter 10. Do not directly edit distributions to bypass the order, and do not move already accepted devices.

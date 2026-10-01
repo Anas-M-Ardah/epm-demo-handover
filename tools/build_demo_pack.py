@@ -154,10 +154,10 @@ Save each project, record its generated ID, and check that its data date is **{D
 Stay in the same role. Open each project → **العقود → إضافة عقد جديد**.
 
 '''+table(['Field','Construction','Supply'],[
-['رمز العقد','DEMO-CIV-26','DEMO-SUP-26'],['اسم العقد','عقد إنشاء مبنى المختبرات التعليمية','عقد تجهيز مختبرات البحث العلمي'],['المكوّن','المكوّن المدني','المكوّن التجهيزي'],['الحالة','مستمر','مستمر'],['العملة','IQD — الدينار العراقي','IQD — الدينار العراقي'],
+['رمز العقد','UOB-CIV-2026-041','UOB-SUP-2026-017'],['اسم العقد','عقد إنشاء مبنى المختبرات التعليمية','عقد تجهيز مختبرات البحث العلمي'],['المكوّن','المكوّن المدني','المكوّن التجهيزي'],['الحالة','مستمر','مستمر'],['العملة','IQD — الدينار العراقي','IQD — الدينار العراقي'],
 ['مبلغ الإحالة','3400000000','285000000'],['الاحتياط','340000000','28500000'],['مبلغ الإشراف','170000000','14250000'],['مبلغ المراقبة','0','0'],
 ['تاريخ المباشرة',day(-180),day(-90)],['تاريخ الإنجاز',day(365),day(45)],
-['المقاول / المجهز','شركة روافد الجادرية للمقاولات','شركة مدار المختبر للتجهيز العلمي'],['الجهة المنفذة','قسم الشؤون الهندسية — جامعة بغداد','شعبة التجهيز — جامعة بغداد'],['الاستشاري','مكتب آفاق الجادرية للاستشارات الهندسية','مكتب آفاق الجادرية للاستشارات الهندسية'],['كتاب الإحالة','UOB-ENG-2026-041','UOB-SUP-2026-017'],['تاريخ الكتاب',day(-190),day(-100)],['التواصل','civil.demo@example.invalid','supply.demo@example.invalid']])+'''
+['المقاول / المجهز','شركة روافد الجادرية للمقاولات','شركة مدار المختبر للتجهيز العلمي'],['الجهة المنفذة','قسم الشؤون الهندسية — جامعة بغداد','شعبة التجهيز — جامعة بغداد'],['الاستشاري','مكتب آفاق الجادرية للاستشارات الهندسية','مكتب آفاق الجادرية للاستشارات الهندسية'],['كتاب الإحالة','UOB-ENG-2026-041','UOB-SUP-2026-017'],['تاريخ الكتاب',day(-190),day(-100)],['التواصل','contracts.civil@example.org','contracts.supply@example.org']])+'''
 
 These contractor names and contact addresses are fictional. Do not substitute actual vendors without authorization.
 
@@ -178,8 +178,8 @@ Use the dedicated files, not the data-reference tables or the full guide:
 
 | Contract | Upload | Expected lines | Expected amount |
 | --- | --- | ---: | ---: |
-| DEMO-CIV-26 | [construction-boq.xlsx](../uploads/01-boq/construction-boq.xlsx) | 10 | 3,400,000,000 IQD |
-| DEMO-SUP-26 | [supply-boq.xlsx](../uploads/01-boq/supply-boq.xlsx) | 6 | 285,000,000 IQD |
+| UOB-CIV-2026-041 | [construction-boq.xlsx](../uploads/01-boq/construction-boq.xlsx) | 10 | 3,400,000,000 IQD |
+| UOB-SUP-2026-017 | [supply-boq.xlsx](../uploads/01-boq/supply-boq.xlsx) | 6 | 285,000,000 IQD |
 
 1. As **المستخدم المختص — جامعة بغداد**, open the project and select its contract.
 2. Construction: open **جدول الكميات**. Supply: open **الفقرات التجهيزية** and its BOQ/import action.
@@ -203,8 +203,8 @@ For each contract, use **المستخدم المختص — جامعة بغداد
 
 | Contract | File | Expected activity count | Cost |
 | --- | --- | ---: | ---: |
-| DEMO-CIV-26 | [construction-baseline.xer](../uploads/02-schedules/construction-baseline.xer) | 11 including M900 | 3,400,000,000 IQD |
-| DEMO-SUP-26 | [supply-baseline.xer](../uploads/02-schedules/supply-baseline.xer) | 7 including M900 | 285,000,000 IQD |
+| UOB-CIV-2026-041 | [construction-baseline.xer](../uploads/02-schedules/construction-baseline.xer) | 11 including M900 | 3,400,000,000 IQD |
+| UOB-SUP-2026-017 | [supply-baseline.xer](../uploads/02-schedules/supply-baseline.xer) | 7 including M900 | 285,000,000 IQD |
 
 1. Select Primavera XER, cost weighting and **خط أساس**.
 2. Review activity IDs, WBS groups, dates, costs, calendars and relationships.
@@ -252,7 +252,7 @@ Now complete the current-schedule update in chapter 04. It must preserve these a
 ''')
 
 chapter('06-supply-distribution-and-receipts.md','Distribute supply and complete receipt handoffs',f'''
-Open the supply project's **الفقرات التجهيزية**, contract DEMO-SUP-26. Do not substitute construction progress approval for the physical receipt process.
+Open the supply project's **الفقرات التجهيزية**, contract UOB-SUP-2026-017. Do not substitute construction progress approval for the physical receipt process.
 
 ## Allocate quantities
 As **المستخدم المختص — جامعة بغداد**, allocate all original quantities to **جامعة بغداد**: S01 3, S02 2, S03 4, S04 6, S05 2, S06 4. Save each line. Expected allocated quantities equal contracted quantities, but all received quantities remain zero.
@@ -281,18 +281,18 @@ All files are in `uploads/`. Same-day dates represent a condensed walkthrough, n
 
 **Expected:** warehouse total remains 3; preliminary and final totals are 2. One device remains in warehouse awaiting beneficiary handover. Correction and reinspection do not add stock or erase the original nonconforming record. The other supply lines remain unreceived for later sessions.
 
-If the app provides device-detail fields, enter for S04: model `DM-40`, origin `Germany`, warranty `24 months`, serial range `DEMO-MIC-001` to `DEMO-MIC-006`; these are fictional identifiers, not assertions about a manufacturer. Do not create unsupported fields if the panel lacks them.
+If the app provides device-detail fields, enter for S04: model `DM-40`, origin `Germany`, warranty `24 months`, serial range `UOB-MIC-2026-001` to `UOB-MIC-2026-006`; these are fictional identifiers, not assertions about a manufacturer. Do not create unsupported fields if the panel lacks them.
 
 ## Optional redistribution
 After adding `tu` as an allowed project beneficiary, use the untouched S06 line to move **1 of 4 UPS units** from Baghdad to the technology university through a supply change order in chapter 10. Do not directly edit distributions to bypass the order, and do not move already accepted devices.
 ''')
 
 chapter('07-finance-and-payment-approval.md','Finance and payment approval',f'''
-The financial basis in chapter 02 must already be saved. Use construction contract **DEMO-CIV-26**. The current payment wizard records the cost-component distribution and its sum; do not invent a required **نوع الدفعة** selector or a gross/retention form if it is not shown.
+The financial basis in chapter 02 must already be saved. Use construction contract **UOB-CIV-2026-041**. The current payment wizard records the cost-component distribution and its sum; do not invent a required **نوع الدفعة** selector or a gross/retention form if it is not shown.
 
 ## Register the first certificate
 As **مهندس مقيم**, open **الموقف المالي → الدفعات → تسجيل دفعة**.
-1. Select DEMO-CIV-26.
+1. Select UOB-CIV-2026-041.
 2. Enter the three components below.
 3. Enter the official letter number and date.
 4. Upload the financial letter and the measurement sheet in their respective areas.
@@ -379,7 +379,7 @@ chapter('10-change-orders-and-supply-differences.md','Change orders and construc
 Perform this chapter **after** the progress checkpoints, because applying a quantity change can legitimately alter weights and percentages.
 
 ## Construction quantity increase
-As **مهندس مقيم**, open the construction project's **الأوامر التغييرية → إنشاء أمر تغييري** and select DEMO-CIV-26.
+As **مهندس مقيم**, open the construction project's **الأوامر التغييرية → إنشاء أمر تغييري** and select UOB-CIV-2026-041.
 
 | Field | Value |
 | --- | --- |
@@ -430,7 +430,7 @@ When approved, first show that original/effective contract values have not chang
 **Expected after successful application:** effective contract value **3,921,100,000 IQD** (original contract 3,910,000,000 + 11,100,000), and effective BOQ value **3,411,100,000 IQD**, effective C01 quantity **3,100 m³**, original quantity and award retained in history, unchanged contractual finish because approved days are zero. Applying again must not double the change. The official project revised budget remains **4,100,000,000 IQD** until finance separately changes it.
 
 ## Supply difference and zero-value redistribution
-Use untouched S06 in DEMO-SUP-26. Ensure the technology university is an allowed beneficiary. Create a supply redistribution moving **1 UPS** from Baghdad to the technology university. Attach `supply-redistribution-justification.pdf`; proposals and approved days are **0 monetary impact / 0 days**.
+Use untouched S06 in UOB-SUP-2026-017. Ensure the technology university is an allowed beneficiary. Create a supply redistribution moving **1 UPS** from Baghdad to the technology university. Attach `supply-redistribution-justification.pdf`; proposals and approved days are **0 monetary impact / 0 days**.
 
 The technical party is **لجنة الفحص والاستلام**, not **دائرة المهندس المقيم**. Before applying: Baghdad 4 / technology university 0. After the approved order is applied: **Baghdad 3 / technology university 1**, contracted total remains 4 and supply BOQ/award component remains **285,000,000 IQD** and effective contract value remains **327,750,000 IQD**.
 
@@ -540,7 +540,7 @@ The core cycle deliberately uses two rich projects. Add these only after complet
 ['تأهيل المكتبة المركزية','إنشائي',2200000000,1850000000,185000000,92500000,0,'Separate rehabilitation component alongside new construction'],
 ['تجهيز ورشة القياسات الهندسية','تجهيز',495000000,420000000,42000000,21000000,0,'Higher-value equipment procurement with several beneficiaries']])+'''
 
-Use distinct contract codes DEMO-EXT-01 through DEMO-EXT-04. Record all generated IDs in the session ledger. Do not label a project completed, delayed or paid just to diversify the dashboard: build the corresponding schedule, readings and payment history first. These optional projects begin as planning/procurement examples and are not included in the core expected totals.
+Use distinct contract codes UOB-PRJ-2026-01 through UOB-PRJ-2026-04. Record all generated IDs in the session ledger. Do not label a project completed, delayed or paid just to diversify the dashboard: build the corresponding schedule, readings and payment history first. These optional projects begin as planning/procurement examples and are not included in the core expected totals.
 
 For a repeat demonstration, use a new approved test project pair and unique contract/letter suffixes, or an administrator-provided fresh demonstration instance. Do not delete unrelated workspaces or reset the application from this guide. Keep a session ledger for each run. A later data date requires a consistently regenerated pack, not a mixture of old letters and new expected SLA values.
 ''')
@@ -581,8 +581,8 @@ Copy this document for each run. Do not store passwords here.
 | Workspace reused or created | |
 | Construction project ID | |
 | Supply project ID | |
-| Construction contract code | DEMO-CIV-26 |
-| Supply contract code | DEMO-SUP-26 |
+| Construction contract code | UOB-CIV-2026-041 |
+| Supply contract code | UOB-SUP-2026-017 |
 | BOQ and schedule version numbers | |
 | Letter 101 generated payment number | |
 | Letter 102 generated payment number | |
@@ -649,7 +649,7 @@ No script in this repository resets or seeds a database. Do not use development 
 pdfs=[]
 def evidence(path,title,lines):pdfs.append((path,title,lines))
 evidence('03-evidence/construction-measurement-period-1.pdf','Construction measurement record — period 1',[
- f'Reference data date: {D}; contract DEMO-CIV-26.',
+ f'Reference data date: {D}; contract UOB-CIV-2026-041.',
  'C01 earthworks: 2,500 m3 x 18,000 IQD = 45,000,000 IQD; 100%.',
  'C02 foundations: 600 m3 x 350,000 IQD = 210,000,000 IQD; 100%.',
  'C03 frame: 480 m3 x 450,000 IQD = 216,000,000 IQD; 30%.',
@@ -658,7 +658,7 @@ evidence('03-evidence/construction-measurement-period-1.pdf','Construction measu
  'Measurement basis: cumulative accepted installed quantities; retain individual activity actual start/finish dates from the walkthrough.',
  'Submission: university specialist. Independent review: resident engineer. Names and decisions are recorded in EPM, not pre-signed here.'])
 evidence('03-evidence/construction-measurement-period-2.pdf','Construction measurement record — period 2',[
- f'Reference data date: {day(30)}; contract DEMO-CIV-26.',
+ f'Reference data date: {day(30)}; contract UOB-CIV-2026-041.',
  'C03 frame: previous 480 m3; additional 240 m3; cumulative 720 m3 (45%).',
  'C04 masonry: previous 600 m2; additional 600 m2; cumulative 1,200 m2 (20%).',
  'Additional earned value: 108,000,000 + 33,000,000 = 141,000,000 IQD.',
@@ -674,18 +674,18 @@ for item,qty,stages in [('S04',6,['readiness','warehouse','preliminary','final']
    'correction':'Supplier adjusted alarms and supplied the missing calibration certificate. Independent reinspection is still required.',
    'reinspection':'Baghdad beneficiary repeated alarm tests and checked both calibration records; conforming. Original receipt quantity is unchanged.',
    'final':'Beneficiary acceptance after conforming inspection, handover documentation and operator instruction. No new stock is created.'}
-  evidence(f'04-supply/{item}-{stage}.pdf',f'{item} — {stage.title()} record',[f'Contract DEMO-SUP-26; reference date {D}.',f'Item: {"Research microscope with camera" if item=="S04" else "Ultra low temperature laboratory freezer"}; quantity in this record: {n} devices.',details[stage],'Reference the actual receipt number generated by EPM. This file does not contain a forged signature or official stamp.'])
+  evidence(f'04-supply/{item}-{stage}.pdf',f'{item} — {stage.title()} record',[f'Contract UOB-SUP-2026-017; reference date {D}.',f'Item: {"Research microscope with camera" if item=="S04" else "Ultra low temperature laboratory freezer"}; quantity in this record: {n} devices.',details[stage],'Reference the actual receipt number generated by EPM. This file does not contain a forged signature or official stamp.'])
 for no,amount,award,reserve,superv,offset in [(101,200000000,180000000,12000000,8000000,0),(102,150000000,135000000,9000000,6000000,-16)]:
  for kind in ['letter','measurement']:
   evidence(f'05-finance/payment-{no}-{kind}.pdf',f'Payment {no} — {kind.title()}',[
-   f'Letter UOB-FIN-2026-{no}; date {day(offset)}; contract DEMO-CIV-26.',
+   f'Letter UOB-FIN-2026-{no}; date {day(offset)}; contract UOB-CIV-2026-041.',
    f'Requested amount {amount:,} IQD = award {award:,} + reserve {reserve:,} + supervision/monitoring {superv:,}.',
    'Installment against the accepted foundations and measured frame/masonry works. The second request does not repeat the first installment.',
    'Combined requests: 350,000,000 IQD; accepted cumulative work supporting the demonstration: 504,000,000 IQD.',
    'For the back-entered letter, the corresponding measured works are assumed available by its date; final cumulative inspection remains at the project data date.',
    'This request is not proof of disbursement. Resident review, financial review and accounts release are recorded separately in EPM.'])
 evidence('06-changes/construction-quantity-justification.pdf','Additional excavation quantity justification',[
- 'Contract DEMO-CIV-26; item C01; correspondence UOB-CIV-VO-001.',
+ 'Contract UOB-CIV-2026-041; item C01; correspondence UOB-CIV-VO-001.',
  'Survey reconciliation identified an additional 600 m3 of excavation due to founding-level differences.',
  'Original quantity 2,500 m3 at 18,000 IQD/m3. Original 20% allowance: 500 m3.',
  'Within allowance: 500 x 18,000 = 9,000,000 IQD. Excess: 100 x proposed 21,000 = 2,100,000 IQD.',
@@ -693,7 +693,7 @@ evidence('06-changes/construction-quantity-justification.pdf','Additional excava
  'Requested time impact: zero days. Proposed prices require committee approval; this memo does not approve a price.',
  'This is a scenario measurement memo, not an actual signed site survey.'])
 evidence('06-changes/supply-redistribution-justification.pdf','UPS beneficiary redistribution justification',[
- 'Contract DEMO-SUP-26; item S06; four UPS devices, no receipts against this line.',
+ 'Contract UOB-SUP-2026-017; item S06; four UPS devices, no receipts against this line.',
  'Proposal: transfer one allocated device from University of Baghdad to University of Technology.',
  'Before: Baghdad 4, Technology 0. After application: Baghdad 3, Technology 1.',
  'Total quantity 4, unit rate 2,500,000 IQD, total 10,000,000 IQD: unchanged.',

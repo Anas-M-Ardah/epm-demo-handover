@@ -5,8 +5,8 @@ For each contract, use **المستخدم المختص — جامعة بغداد
 
 | Contract | File | Expected activity count | Cost |
 | --- | --- | ---: | ---: |
-| DEMO-CIV-26 | [construction-baseline.xer](../uploads/02-schedules/construction-baseline.xer) | 11 including M900 | 3,400,000,000 IQD |
-| DEMO-SUP-26 | [supply-baseline.xer](../uploads/02-schedules/supply-baseline.xer) | 7 including M900 | 285,000,000 IQD |
+| UOB-CIV-2026-041 | [construction-baseline.xer](../uploads/02-schedules/construction-baseline.xer) | 11 including M900 | 3,400,000,000 IQD |
+| UOB-SUP-2026-017 | [supply-baseline.xer](../uploads/02-schedules/supply-baseline.xer) | 7 including M900 | 285,000,000 IQD |
 
 1. Select Primavera XER, cost weighting and **خط أساس**.
 2. Review activity IDs, WBS groups, dates, costs, calendars and relationships.
