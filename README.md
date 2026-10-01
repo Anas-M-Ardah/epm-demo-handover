@@ -41,3 +41,7 @@ Begin with the two principal projects. The optional portfolio extension comes af
 This folder is its own Git repository. The website uses local assets, including Cairo with its font license. It needs no application server, API, account, build step or internet connection to read. Extract the entire ZIP before opening `index.html`; keep its folders together. Any static host can serve the same root folder.
 
 Features: full-text search, sequential chapters, copyable input cells, PDF viewing/downloads, print-friendly guides, a local session notebook, and saved completion/acceptance checklists. Changing browser or clearing browser storage will not retain session notes; export them after each run. Markdown files remain the editable source and fallback.
+
+## Published guide
+
+Open the handbook at https://anas-m-ardah.github.io/epm-demo-handover/ . GitHub Pages serves the root of the `main` branch. Push changes to `main` after regenerating `assets/content.js` and checking the pack. The `.nojekyll` file keeps the static assets unchanged.
